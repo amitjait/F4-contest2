@@ -1,12 +1,18 @@
+import Movie from "./Movies";
+import MovieHeader from "./MovieHeader";
 
-function MoviesList({title, year, genre}){
+function MoviesList({arr}){
 
     return (
-        <div className="container-custom d-flex hover" style={{"width": "59%", "height":"fit-content"}}>
-            <div className="container-md border text-wrap min-h" style={{"width":"60%", }}>{title}</div>
-            <div className="container-md border text-wrap min-h" style={{"width":"25%", }}>{genre}</div>
-            <div className="container-md border text-wrap min-h" style={{"width":"20%", }}>{year}</div>
-        </div>
+        <div className="container-fluid mt-3" style={{"width":"100%"}}>
+                <MovieHeader />
+                {
+                    arr.map(value => (
+                        <Movie title={value.title} genre={value.genre} year={value.year}/>
+                    ))   
+                }
+
+            </div>
     )
 }
 
