@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import MoviesList from "./Components/MovieList";
+import {movies} from "./Data";
+import MovieHeader from "./Components/MovieHeader";
+import GenreFilter from "./Components/GenreFilter";
+import "./style.css"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+function App(){
+
+    return (
+        <div>
+            <div className="container-fluid text-center p-2" style={{"width":"50%"}}><h1>Top 15 Movies of All Time</h1></div>
+            <GenreFilter />
+            <div className="container-fluid mt-3" style={{"width":"100%"}}>
+                <MovieHeader />
+                {
+                    movies.map((value) => (
+                        <MoviesList title={value.title} genre={value.genre} year={value.year}/>
+                    ))
+                }
+            </div>
+        </div>
+    )
 }
 
 export default App;

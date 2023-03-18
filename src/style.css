@@ -1,0 +1,9 @@
+body{
+    margin: 0px auto;
+    margin-top: 2rem;
+}
+
+.movie-list:first-child{
+    color:green;
+    font-weight: bold;
+}
