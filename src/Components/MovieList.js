@@ -2,10 +2,10 @@
 function MoviesList({title, year, genre}){
 
     return (
-        <div className="container-md d-flex" style={{"width": "60%", "height":"35px"}}>
-            <div className="container-md border" style={{"width":"60%", "height" : "35px"}}>{title}</div>
-            <div className="container-md border" style={{"width":"25%", "height" : "35px"}}>{genre}</div>
-            <div className="container-md border" style={{"width":"20%", "height" : "35px"}}>{year}</div>
+        <div className="container-custom d-flex hover" style={{"width": "59%", "height":"fit-content"}}>
+            <div className="container-md border text-wrap min-h" style={{"width":"60%", }}>{title}</div>
+            <div className="container-md border text-wrap min-h" style={{"width":"25%", }}>{genre}</div>
+            <div className="container-md border text-wrap min-h" style={{"width":"20%", }}>{year}</div>
         </div>
     )
 }

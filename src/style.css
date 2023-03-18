@@ -7,3 +7,21 @@ body{
     color:green;
     font-weight: bold;
 }
+
+.min-h{
+    min-height: 35px;
+}
+
+.hover:hover{
+    background-color: rgb(205, 205, 205);
+}
+
+.container-custom{
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+    width: 100%;
+    /* padding-right: calc(var(--bs-gutter-x) * .5); */
+    /* padding-left: calc(var(--bs-gutter-x) * .5); */
+    margin-right: auto;
+    margin-left: auto;
+}
